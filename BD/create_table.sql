@@ -61,7 +61,7 @@ constraint Fk_employe_typeEmploye FOREIGN KEY (id_type_employe) REFERENCES Type_
 
 CREATE TABLE IF NOT EXISTS Clef(
 id_clef int(11) not null AUTO_INCREMENT,
-emruntee_clef boolean not null,
+empruntee_clef boolean not null,
 numero_clef int(11) not null,
 constraint PK_cleft PRIMARY KEY (id_clef)
 );
