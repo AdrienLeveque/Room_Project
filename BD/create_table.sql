@@ -1,3 +1,8 @@
+drop database if exists room_service;
+
+create database room_service;
+use room_service;
+
 drop table if exists Materiel_reservee;
 drop table if exists Reservation;
 drop table if exists Materiel;
