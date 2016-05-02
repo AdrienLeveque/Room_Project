@@ -37,12 +37,12 @@
 						<label>Salle:</label>
 					</div>
 					<div class="col-md-12">
-						<label>Adresse</label>
+						<label>Adresse:</label>
 					</div>  
 					<div class="col-md-12">
 						<label>Capacité de la salle: </label>
 					</div> 
-					<div class="col-md-12">:
+					<div class="col-md-12">
 						<label>Gardien sur place:</label>
 					</div> 
 					<div class="col-md-6">
@@ -81,7 +81,7 @@
 	 					<div class="col-md-12">
 		 					<legend>Materiél loué</legend>
 		 					<div class="col-md-4">
-		 						<label>Chaise</label>
+		 						<label>Chaises</label>
 		 					</div>
 		 					<div class="col-md-2">
 		 						 <input type="texte" class="form-control" name="" id="" placeholder="">

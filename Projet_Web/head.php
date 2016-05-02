@@ -6,7 +6,7 @@
 	try
 		{
 			// On se connecte à MySQL
-			$bdd = new PDO('mysql:host=localhost;dbname=room_project;charset=utf8', 'root', '****');
+			$bdd = new PDO('mysql:host=localhost;dbname=bioprojet;charset=utf8', 'root', '');
 			array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 			}
 
@@ -20,10 +20,10 @@
 	<head>
 		<meta charset="utf-8">
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
 		<!-- Optional theme -->
-		<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
 	</head>
 
 <!-- Barre du haut  -->
