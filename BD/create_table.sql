@@ -1,4 +1,4 @@
-drop database if exists room_service;
+drop database if exists room_project;
 
 create database room_service;
 use room_service;
