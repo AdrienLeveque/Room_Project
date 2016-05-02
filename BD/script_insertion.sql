@@ -18,10 +18,10 @@ INSERT INTO employe (nom_employe, prenom_employe, adresse_employe, telephone_emp
 INSERT INTO employe (nom_employe, prenom_employe, adresse_employe, telephone_employe, courriel_employe, mdp_employe, id_type_employe) VALUES ("vladimir", "putin", "en russie", "0312854582", "putin@gmail.com", "vladimir", 2);
 
 -- Client
-INSERT INTO client (nom_client, prenom_client, adresse_client, telephone_client, courriel_client, date_naissance_client, mdp_client, id_statut_client) VALUES ("leveque", "adrien", "avec sa copine", "0725266547", "riri91@gmail.com", "12/01/1991", "riri", 4);
-INSERT INTO client (nom_client, prenom_client, adresse_client, telephone_client, courriel_client, date_naissance_client, mdp_client, id_statut_client) VALUES ("catalin", "radu", "en region parisienne", "0725266548", "radu.catalin@gmail.com", "12/01/1972", "radu", 5);
-INSERT INTO client (nom_client, prenom_client, adresse_client, telephone_client, courriel_client, date_naissance_client, mdp_client, id_statut_client) VALUES ("bailly", "benjamin", "dans l'appartement de ses parents", "0725266545", "eiren_whisper@gmail.com", "12/01/1991", "benjamin", 6);
-INSERT INTO client (nom_client, prenom_client, adresse_client, telephone_client, courriel_client, date_naissance_client, mdp_client, id_statut_client) VALUES ("manaud", "audric", "en solo", "0725266522", "mano@gmail.com", "12/01/1991", "jaimeleschevres", 5);
+INSERT INTO client (nom_client, prenom_client, adresse_client, telephone_client, courriel_client, date_naissance_client, mdp_client, id_statut_client) VALUES ("leveque", "adrien", "avec sa copine", "0725266547", "riri91@gmail.com", "12/01/1991", "riri", 1);
+INSERT INTO client (nom_client, prenom_client, adresse_client, telephone_client, courriel_client, date_naissance_client, mdp_client, id_statut_client) VALUES ("catalin", "radu", "en region parisienne", "0725266548", "radu.catalin@gmail.com", "12/01/1972", "radu", 2);
+INSERT INTO client (nom_client, prenom_client, adresse_client, telephone_client, courriel_client, date_naissance_client, mdp_client, id_statut_client) VALUES ("bailly", "benjamin", "dans l'appartement de ses parents", "0725266545", "eiren_whisper@gmail.com", "12/01/1991", "benjamin", 2);
+INSERT INTO client (nom_client, prenom_client, adresse_client, telephone_client, courriel_client, date_naissance_client, mdp_client, id_statut_client) VALUES ("manaud", "audric", "en solo", "0725266522", "mano@gmail.com", "12/01/1991", "jaimeleschevres", 3);
 
 -- Clef
 INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 100);
@@ -38,9 +38,9 @@ INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 111);
 INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 110);
 
 -- Type_salle
-INSERT INTO type_salle (libelle_type_salle) VALUES('grand');
 INSERT INTO type_salle (libelle_type_salle) VALUES('petite');
-INSERT INTO type_salle (libelle_type_salle) VALUES('moyen');
+INSERT INTO type_salle (libelle_type_salle) VALUES('moyenne');
+INSERT INTO type_salle (libelle_type_salle) VALUES('grande');
 
 -- Salle
 INSERT INTO Salle (nom_salle, numero_salle, adresse_salle, capacite_salle, gardien_salle, 
