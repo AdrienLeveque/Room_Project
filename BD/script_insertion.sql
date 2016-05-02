@@ -63,3 +63,15 @@ INSERT INTO `reservation`(`date_debut`, `date_fin`, `etat_lieux_effectue`, `id_c
 INSERT INTO `reservation`(`date_debut`, `date_fin`, `etat_lieux_effectue`, `id_client_reservation`, `id_employe_reservation`, `id_salle_reservation`) VALUES ('2016-05-01' ,'2016-05-04', false , 2, 2, 3);
 INSERT INTO `reservation`(`date_debut`, `date_fin`, `etat_lieux_effectue`, `id_client_reservation`, `id_employe_reservation`, `id_salle_reservation`) VALUES ('2016-05-02' ,'2016-05-04', false , 3, 1, 2);
 INSERT INTO `reservation`(`date_debut`, `date_fin`, `etat_lieux_effectue`, `id_client_reservation`, `id_employe_reservation`, `id_salle_reservation`) VALUES ('2016-05-03' ,'2016-05-05', false , 4, 3, 1);
+
+-- matériel
+INSERT INTO materiel(libelle_materiel, caution_materiel) VALUES ("chaise", 20);
+INSERT INTO materiel(libelle_materiel, caution_materiel) VALUES ("table", 30);
+INSERT INTO materiel(libelle_materiel, caution_materiel) VALUES ("ordinateur", 300);
+INSERT INTO materiel(libelle_materiel, caution_materiel) VALUES ("video-projecteur", 100);
+INSERT INTO materiel(libelle_materiel, caution_materiel) VALUES ("téléviseur", 200 );
+
+-- matériel réservé
+INSERT INTO materiel_reservee(id_reservation, id_salle, id_materiel, abime) VALUES (null, 1, 1, false);
+INSERT INTO materiel_reservee(id_reservation, id_salle, id_materiel, abime) VALUES (null, 1, 2, false);
+INSERT INTO materiel_reservee(id_reservation, id_salle, id_materiel, abime) VALUES (1, null, 1, false);
