@@ -57,3 +57,9 @@ INSERT INTO Salle_clef (id_clef, id_salle) VALUES(1, 1);
 INSERT INTO Salle_clef (id_clef, id_salle) VALUES(2, 1);
 INSERT INTO Salle_clef (id_clef, id_salle) VALUES(3, 2);
 INSERT INTO Salle_clef (id_clef, id_salle) VALUES(4, 3);
+
+-- Reservation
+INSERT INTO `reservation`(`date_debut`, `date_fin`, `etat_lieux_effectue`, `id_client_reservation`, `id_employe_reservation`, `id_salle_reservation`) VALUES ('2016-04-02' ,'2016-04-04', false , 1, 1, 1);
+INSERT INTO `reservation`(`date_debut`, `date_fin`, `etat_lieux_effectue`, `id_client_reservation`, `id_employe_reservation`, `id_salle_reservation`) VALUES ('2016-05-01' ,'2016-05-04', false , 2, 2, 3);
+INSERT INTO `reservation`(`date_debut`, `date_fin`, `etat_lieux_effectue`, `id_client_reservation`, `id_employe_reservation`, `id_salle_reservation`) VALUES ('2016-05-02' ,'2016-05-04', false , 3, 1, 2);
+INSERT INTO `reservation`(`date_debut`, `date_fin`, `etat_lieux_effectue`, `id_client_reservation`, `id_employe_reservation`, `id_salle_reservation`) VALUES ('2016-05-03' ,'2016-05-05', false , 4, 3, 1);
