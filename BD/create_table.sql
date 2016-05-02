@@ -98,12 +98,9 @@ constraint Fk_salle_clef_clef FOREIGN KEY (id_clef) REFERENCES Clef (id_clef)
 
 CREATE TABLE IF NOT EXISTS Materiel(
 id_materiel int(11) not null AUTO_INCREMENT,
-libelle_maeriel varchar(20) not null,
+libelle_materiel varchar(20) not null,
 caution_materiel float(5,2) not null,
-abime_materiel boolean not null,
-id_salle int(11),
-constraint PK_materiel PRIMARY KEY (id_materiel),
-constraint Fk_materiel_salle FOREIGN KEY (id_salle) REFERENCES Salle (id_salle)
+constraint PK_materiel PRIMARY KEY (id_materiel)
 );
 
 CREATE TABLE IF NOT EXISTS Reservation(
@@ -122,10 +119,13 @@ constraint Fk_reservation_employe FOREIGN KEY (id_employe_reservation) REFERENCE
 
 CREATE TABLE IF NOT EXISTS Materiel_reservee(
 id_materiel_reservee int(11) not null AUTO_INCREMENT,
-id_reservation int(11) not null,
+id_reservation int(11),
+id_salle int(11),
 id_materiel int(11) not null,
+abime boolean not null,
 constraint PK_materiel_reservee PRIMARY KEY (id_materiel_reservee),
 constraint Fk_materiel_reservee_materiel FOREIGN KEY (id_materiel) REFERENCES Materiel (id_materiel),
-constraint Fk_materiel_reservee_reservation FOREIGN KEY (id_reservation) REFERENCES Reservation (id_reservation)
+constraint Fk_materiel_reservee_reservation FOREIGN KEY (id_reservation) REFERENCES Reservation (id_reservation),
+constraint Fk_materiel_reserve_salle FOREIGN KEY (id_salle) REFERENCES Salle (id_salle)
 );
 
