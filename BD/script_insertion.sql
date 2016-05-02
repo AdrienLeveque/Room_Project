@@ -22,3 +22,38 @@ INSERT INTO client (nom_client, prenom_client, adresse_client, telephone_client,
 INSERT INTO client (nom_client, prenom_client, adresse_client, telephone_client, courriel_client, date_naissance_client, mdp_client, id_statut_client) VALUES ("catalin", "radu", "en region parisienne", "0725266548", "radu.catalin@gmail.com", "12/01/1972", "radu", 5);
 INSERT INTO client (nom_client, prenom_client, adresse_client, telephone_client, courriel_client, date_naissance_client, mdp_client, id_statut_client) VALUES ("bailly", "benjamin", "dans l'appartement de ses parents", "0725266545", "eiren_whisper@gmail.com", "12/01/1991", "benjamin", 6);
 INSERT INTO client (nom_client, prenom_client, adresse_client, telephone_client, courriel_client, date_naissance_client, mdp_client, id_statut_client) VALUES ("manaud", "audric", "en solo", "0725266522", "mano@gmail.com", "12/01/1991", "jaimeleschevres", 5);
+
+-- Clef
+INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 100);
+INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 101);
+INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 102);
+INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 103);
+INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 104);
+INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 105);
+INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 106);
+INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 107);
+INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 108);
+INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 109);
+INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 111);
+INSERT INTO clef (empruntee_clef, numero_clef) VALUES( false, 110);
+
+-- Type_salle
+INSERT INTO type_salle (libelle_type_salle) VALUES('grand');
+INSERT INTO type_salle (libelle_type_salle) VALUES('petite');
+INSERT INTO type_salle (libelle_type_salle) VALUES('moyen');
+
+-- Salle
+INSERT INTO Salle (nom_salle, numero_salle, adresse_salle, capacite_salle, gardien_salle, 
+tarif_salle, caution_salle, id_type_salle, id_employe_salle) VALUES('A', 1, 'Université Paris-Sud 11, Bâtiment 640, 91400 Orsay', 100, true, 300, 100, 3, 1);
+INSERT INTO Salle (nom_salle, numero_salle, adresse_salle, capacite_salle, gardien_salle, 
+tarif_salle, caution_salle, id_type_salle, id_employe_salle) VALUES('B', 2, 'Université Paris-Sud 11, Bâtiment 640, 91400 Orsay', 50, false, 200, 100, 2, null);
+INSERT INTO Salle (nom_salle, numero_salle, adresse_salle, capacite_salle, gardien_salle, 
+tarif_salle, caution_salle, id_type_salle, id_employe_salle) VALUES('C', 3, 'Université Paris-Sud 11, Bâtiment 640, 91400 Orsay', 100, true, 500, 200, 1, 1);
+INSERT INTO Salle (nom_salle, numero_salle, adresse_salle, capacite_salle, gardien_salle, 
+tarif_salle, caution_salle, id_type_salle, id_employe_salle) VALUES('D', 4, 'Université Paris-Sud 11, Bâtiment 640, 91400 Orsay', 100, true, 500, 200, 1, 1);
+
+-- Salle_clef
+INSERT INTO Salle_clef (id_clef, id_salle) VALUES(1, 1);
+INSERT INTO Salle_clef (id_clef, id_salle) VALUES(2, 1);
+INSERT INTO Salle_clef (id_clef, id_salle) VALUES(3, 2);
+INSERT INTO Salle_clef (id_clef, id_salle) VALUES(4, 3);
