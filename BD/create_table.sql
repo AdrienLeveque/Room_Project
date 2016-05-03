@@ -1,7 +1,7 @@
 drop database if exists room_project;
 
-create database room_service;
-use room_service;
+create database room_project;
+use room_project;
 
 drop table if exists Materiel_reservee;
 drop table if exists Reservation;
