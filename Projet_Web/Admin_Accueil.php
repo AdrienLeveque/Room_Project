@@ -50,12 +50,11 @@
 					<div class="col-md-2">
 						<button type="button" class="btn btn-default btn-sm">OK</button>
 					</div>
-					</form>
 				</fieldset>	
-
-				</br></br>
+			</div>
 
 <!-- Gestion des Clients -->
+			<div class="col-md-6"> 
 				<fieldset>
 		 			<legend class="text-center header"><ins><strong>Gestion des clients</strong></ins></legend>
 					<div class="col-md-4"> 
@@ -80,10 +79,13 @@
 						<button type="button" class="btn btn-default btn-sm">OK</button>
 					</div>		
 				</fieldset>	
+			</div>
+			
 
-				</br></br>
-
+		
 <!-- Gestion du matériel -->
+			<div class="col-md-6"> 
+				</br></br>
 				<fieldset>
 		 			<legend class="text-center header"><ins><strong>Gestion du matériel</strong></ins></legend>
 					<div class="col-md-4"> 
@@ -107,17 +109,97 @@
 					<div class="col-md-2">
 						<button type="button" class="btn btn-default btn-sm">OK</button>
 					</div>
-					</form>
 				</fieldset>	
+			</div>
 
+			<div class="col-md-6"> 
+				</br></br>
+				<fieldset>
+		 			<legend class="text-center header"><ins><strong>Gestion des clefs</strong></ins></legend>
+					<div class="col-md-4"> 
+						<label> Ajouter une clef</label>
+					</div>
+					<div class="col-md-6"> 
+						<input type="texte" class="form-control" name="Gestion_clef" id="Gestion_clef" placeholder="">
+					</div>
+					<div class="col-md-2"> 
+						<button type="button" class="btn btn-default btn-sm">OK</button>
+					</div>
+		
+					</br></br>
+
+					<div class="col-md-4">	
+						<label> Supprimer une clef</label>
+					</div>
+					<div class="col-md-6">
+	 					<input type="texte" class="form-control" name="Gestion_clef_2" id="Gestion_clef_2" placeholder="">
+					</div>
+					<div class="col-md-2">
+						<button type="button" class="btn btn-default btn-sm">OK</button>
+					</div>
+				</fieldset>	
 			</div>
 		</div>
 
+		<div class="container">			
+			<div class="col-md-6"> 
+				</br></br>
+				<fieldset>
+		 			<legend class="text-center header"><ins><strong>Gestion des statuts</strong></ins></legend>
+					<div class="col-md-4"> 
+						<label> Ajouter un statut</label>
+					</div>
+					<div class="col-md-6"> 
+						<input type="texte" class="form-control" name="Gestion_statut" id="Gestion_statut" placeholder="">
+					</div>
+					<div class="col-md-2"> 
+						<button type="button" class="btn btn-default btn-sm">OK</button>
+					</div>
+		
+					</br></br>
+
+					<div class="col-md-4">	
+						<label> Supprimer un statuts</label>
+					</div>
+					<div class="col-md-6">
+	 					<input type="texte" class="form-control" name="Gestion_statut_2" id="Gestion_statut_2" placeholder="">
+					</div>
+					<div class="col-md-2">
+						<button type="button" class="btn btn-default btn-sm">OK</button>
+					</div>
+				</fieldset>	
+			</div>
+
+			<div class="col-md-6"> 
+				</br></br>
+				<fieldset>
+		 			<legend class="text-center header"><ins><strong>Gestion des Reductions</strong></ins></legend>
+					<div class="col-md-4"> 
+						<label> Ajouter une Reduc</label>
+					</div>
+					<div class="col-md-6"> 
+						<input type="texte" class="form-control" name="Gestion_Reduction" id="Gestion_Reduction" placeholder="">
+					</div>
+					<div class="col-md-2"> 
+						<button type="button" class="btn btn-default btn-sm">OK</button>
+					</div>
+		
+					</br></br>
+
+					<div class="col-md-4">	
+						<label> Supprimer un Reudc</label>
+					</div>
+					<div class="col-md-6">
+	 					<input type="texte" class="form-control" name="Gestion_Reduction_2" id="Gestion_Reduction_2" placeholder="">
+					</div>
+					<div class="col-md-2">
+						<button type="button" class="btn btn-default btn-sm">OK</button>
+					</div>
+				</fieldset>	
+			</div>
 
 
-
-
-
+		</div>
 
 
 </body>
