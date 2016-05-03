@@ -27,7 +27,7 @@
 		</div>
 
 		<div class="container">
-			<form action="reservation_formulaire.php" method="post">
+			<form action="reservation_paiement.php" method="post">
 				<div class="col-md-12">
 					<div class="col-md-6">  
 						mettre une image
@@ -48,21 +48,35 @@
 						<hr>
 					</div>
 					<div class="col-md-12">
-						<div class="col-md-offset-3">
-							<h2><strong>Selectionner un jour ou une periode disponible</strong></h2>
-						</div>
-					</div>
-					<div class="col-md-12">
 						<div class="col-md-4">
+							<fieldset>
+								<legend> Matériel disponible</legend>
+								<label>Enceinte</label></br>
+								<label>Table</label></br>
+								<label>Chaise</label></br>
+							</fieldset>
 							</br>
-							<select class="form-control">
-								<option selectcted="selected">Semaine du</option>
-							</select>
+							<fieldset>
+								<legend> Matériel loué</legend>
+								<label>20 chaises</label>
+								<label>5 tables</label>
+							</fieldset>
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-7">
+							<h4><strong>Vous avez reservé la salle A pour le : </strong></h4>
+							<fieldset>
+								<legend> Paiement de la caution</legend>
+								<label>Type de carte</label></br>
+								<label>Numéro de carte</label></br>
+								<label>Cryptogramme</label></br>
+							</fieldset>
 						</div>
 					</div>
+
 					<div class="col-md-12">
 					</br></br>
- 						<button type="submit" class="btn btn-default pull-right">Etape suivante</button>
+ 						<button type="submit" class="btn btn-default pull-right">Valider</button>
 					</div>
 				</div>
 			</form>

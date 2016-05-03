@@ -65,7 +65,7 @@
 						<div class="col-md-2"> Date de naissance </div>
 						<div class="col-md-4">
 							<div class="col-md-4"> 
-									<select name="selectD" id="selectD" class="form-control">
+									<select name="select_jour" id="select_jour" class="form-control">
 									  <option selectcted="selected" disabled selected>Jour</option>
 									  <?php  for ($i=1; $i < 32; $i++) {  ?>
 									  	<option><?php echo $i ?></option>
@@ -73,7 +73,7 @@
 									</select>
 							</div>
 							<div class="col-md-4"> 
-									<select name="selectD" id="selectD" class="form-control">
+									<select name="select_mois" id="select_mois" class="form-control">
 									  <option selectcted="selected" disabled selected>Mois</option>
 									  <?php  for ($i=1; $i < 13; $i++) {  ?>
 									  	<option><?php echo $i ?></option>
@@ -82,7 +82,7 @@
 									</select>
 							</div>
 							<div class="col-md-4"> 
-									<select name="selectD" id="selectD" class="form-control">
+									<select name="select_mois" id="select_mois" class="form-control">
 									  <option selectcted="selected" disabled selected>Année</option>
 									  <?php  for ($i=2016; $i > 1900; $i--) {  ?>
 									  	<option><?php echo $i ?></option>
@@ -129,7 +129,7 @@
 					</br></br></br>
 					<div class="col-md-12">
 						<label>
-						  <input id="checkbox2" type="checkbox"> J'ai lu et j'accepte les conditions générales d'utilisation
+						  <input id="checkbox1" type="checkbox"> J'ai lu et j'accepte les conditions générales d'utilisation
 						</label>
 					</div>
 					</br>
