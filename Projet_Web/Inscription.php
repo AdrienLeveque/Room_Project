@@ -1,4 +1,4 @@
-<?php include("head.php") ?>
+<?php include("head_deconnecte.php") ?>
 <body>	
 <!-- Titre -->
 	 <div class="container">

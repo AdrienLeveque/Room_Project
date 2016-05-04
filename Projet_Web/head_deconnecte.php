@@ -31,7 +31,7 @@
 		</br>
 		<div class="container">
 			<label>Mairie de la ville d'Orsay </label> 
-			<button type="submit" class="pull-right">Deconnexion</button>
+			
 			<hr>
 		</div>
 	</body>
