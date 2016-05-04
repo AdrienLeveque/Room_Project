@@ -12,14 +12,14 @@
 		<div class="container">
 		    <nav class="navbar navbar-default">
 		      	<div class="navbar-header">
-  					<a class="navbar-brand" href="#">Employé: </a>
+  					<a class="navbar-brand" href="#">Utilisateur non enregistré: </a>
   				</div>
 		        <div class="container-fluid">
 		          <ul class="nav navbar-nav">
-		            <li> <a href="employe_accueil.php">Accueil</a> </li>
-		            <li class="active"> <a href="employe_edt.php">Mon emploi du temps</a></li>
-		            <li> <a href="employe_compte.php">Mon compte</a> </li>
-		            <li> <a href="employe_reservation.php">Mes Reservations</a> </li>
+		            <li> <a href="Accueil.php">Accueil</a> </li>
+		            <li class="active"> <a href="connexion.php">Connexion</a></li>
+		            <li> <a href="Inscription.php">Inscription</a> </li>
+		            <li> <a href="Comment_ca_marche.php">Comment ça marche</a> </li>
 		            <li> <a href="contact.php">Contact</a> </li>
 		          </ul>
 		        </div>

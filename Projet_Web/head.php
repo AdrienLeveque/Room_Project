@@ -6,7 +6,7 @@
 	try
 		{
 			// On se connecte à MySQL
-			$bdd = new PDO('mysql:host=localhost;dbname=bioprojet;charset=utf8', 'root', '');
+			$bdd = new PDO('mysql:host=localhost;dbname=room_projet;charset=utf8', 'root', 'alex95');
 			array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 			}
 
