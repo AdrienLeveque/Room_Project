@@ -1,0 +1,57 @@
+
+------------------------ Creer une application laravel --------------------------
+
+composer create-project laravel/laravel laravel5 --prefer-dist
+
+-- mettre à jour composer 
+
+composer update
+
+
+------------------------------ Commandes artisan --------------------------------
+
+-- creer un controleur 
+-- (le paramètre plain permet de demander un controlleur vide)
+
+php artisan make:controller WelcomeController --plain
+
+
+-- creer une requête
+
+php artisan make:request ContactRequest
+
+-- installer la migration (creer une table 'migration' dans notre BD mémorisant toutes les actions au niveau du shéma de la base)
+-- Attention : Modifier le fichier .env pour donner l'accès à la BD
+
+php artisan migrate:install
+
+-- creer la migration pour une table
+
+php artisan make:migration notre_table
+
+-- une fois les fonction 'up' et 'down' complétées, on utilise migrate pour renseigner la table dans la BD
+
+php artisan migrate
+
+php artisan migrate:rollback (permet d'annulé la dernière migration)
+
+-- Creation d'un modèle
+
+php artisan make:model Notre_modele
+
+-- creer une ressource
+
+artisan make:controller UserController
+
+7 methode implémenté :
+- index : pour afficher la liste des utilisateurs,
+- create : pour envoyer le formulaire pour la création d'un nouvel utilisateur,
+- store : pour créer un nouvel utilisateur,
+- show : pour afficher les données d'un utilisateur,
+- edit : pour envoyer le formulaire pour la modification d'un utilisateur,
+- update : pour modifier les données d'un utilisateur,
+- destroy : pour supprimer un utilisateur.
+
+-- afficher la liste des routes : 
+
+php artisan route:list
