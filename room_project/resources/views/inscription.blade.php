@@ -77,31 +77,12 @@
 					<div class="col-md-12">
 						<div class="col-md-4"> Date de naissance </div>
 						<div class="col-md-8">
-							<div class="col-md-4"> 
-									<select name="select_jour" id="select_jour" class="form-control">
-									  <option selectcted="selected" disabled selected>Jour</option>
-									  <?php  for ($i=1; $i < 32; $i++) {  ?>
-									  	<option><?php echo $i ?></option>
-									  <?php } ?>
-									</select>
+							
+							<div class="form-group {!! $errors->has('jour') ? 'has-error' : '' !!}">
+								{!! Form::date('jour', null, array('class' => 'form-control', 'placeholder' => 'Entrez votre mot de passe')) !!}
+								{!! $errors->first('jour', '<small class="help-block">:message</small>') !!}
 							</div>
-							<div class="col-md-4"> 
-									<select name="select_mois" id="select_mois" class="form-control">
-									  <option selectcted="selected" disabled selected>Mois</option>
-									  <?php  for ($i=1; $i < 13; $i++) {  ?>
-									  	<option><?php echo $i ?></option>
-									  <?php } ?>
-
-									</select>
-							</div>
-							<div class="col-md-4"> 
-									<select name="select_mois" id="select_mois" class="form-control">
-									  <option selectcted="selected" disabled selected>Année</option>
-									  <?php  for ($i=2016; $i > 1900; $i--) {  ?>
-									  	<option><?php echo $i ?></option>
-									  <?php } ?>
-									</select>
-							</div>
+							
 						</div>
 					</div>
 
@@ -155,15 +136,23 @@
 					</div>
 					</br></br></br>
 					<div class="col-md-12">
-						<label>
-						  <input id="checkbox1" type="checkbox"> J'ai lu et j'accepte les conditions générales d'utilisation
-						</label>
+						
+							<div class="form-group {!! $errors->has('checkbox1') ? 'has-error' : '' !!}">
+								{!! Form::checkbox('checkbox1') !!}
+								{!! $errors->first('checkbox1', '<small class="help-block">:message</small>') !!}
+								J'ai lu et j'accepte les conditions générales d'utilisation
+							</div>
+						
 					</div>
 					</br>
 					<div class="col-md-12">
-						<label>
-						  <input id="checkbox2" type="checkbox"> Je refuse que ces informatins soient utilisées à des fins commerciale
-						</label>
+						
+							<div class="form-group {!! $errors->has('checkbox2') ? 'has-error' : '' !!}">
+								{!! Form::checkbox('checkbox2') !!}
+								{!! $errors->first('checkbox2', '<small class="help-block">:message</small>') !!}
+								Je refuse que ces informatins soient utilisées à des fins commerciale
+							</div>
+						
 					</div>
 
 					</br></br></br>
