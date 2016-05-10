@@ -19,13 +19,62 @@
 		          <ul class="nav navbar-nav">
 		            <li> <a href="accueil">Accueil</a> </li>
 		            <li> <a href="connexion">Connexion</a></li>
-		            <li class="active"> <a href="comment_ca_marche">Comment ça marche</a> </li>
-		            <li> <a href="contact">Contact</a> </li>
+		            <li class="active"> <a href="comment_ca_marche">Informations</a> </li>
+		            <li> <a href="client_contact">Contact</a> </li>
 		          </ul>
 		        </div>
 		     </nav>
 		</div>
 
+		<div class="container">
+			<div class="col-md-6"> 
+				<fieldset>
+					<legend>Information à propos de la Mairie</legend>
+				</fieldset>
+				<div class="col-md-12">
+	 				<label>Adresse :</label>
+	 				<address>
+						  1355 Market Street, Suite 900<br>
+						  San Francisco, CA 94103<br>
+						  <abbr title="Phone">P:</abbr> (123) 456-7890
+					</address>
+	 			</div>
+	 			<div class="col-md-12">
+	 				<label>Téléphone:</label>
+					
+	 			</div>
+	 			<div class="col-md-12">
+	 				<label>Couriel:</label>
+	 			</div>
+			</div>
+
+			<div class="col-md-6"> 
+				<fieldset>
+					<legend>Horaire d'ouverture</legend>
+				</fieldset>
+				<div class="col-md-12">
+	 				<label>Lundi:</label>
+	 			</div>
+	 			<div class="col-md-12">
+	 				<label>Mardi:</label>
+	 			</div>
+	 			<div class="col-md-12">
+	 				<label>Mercredi:</label>
+	 			</div>
+	 			<div class="col-md-12">
+	 				<label>Jeudi:</label>
+	 			</div>	
+	 			<div class="col-md-12">
+	 				<label>Vendredi:</label>
+	 			</div>	
+	 			<div class="col-md-12">
+	 				<label>Samedi:</label>
+	 			</div>	
+	 			<div class="col-md-12">
+	 				<label>Dimanche:</label>
+	 			</div>		 				 				 				 							
+			</div>
+		</div>
 		<div class="container">
 			<header class="page-header">
 				<h1>Les types de location proposés sont :</h1>
