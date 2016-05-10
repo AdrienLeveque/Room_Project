@@ -13,11 +13,34 @@ class ConnexionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function getFrom()
     {
         return view('connexion');
     }
+	
+	public function postForm(IdentifiantRequest $request)
+	{
+		//$image = $request->file('image');
 
+		if($image->isValid())
+		{
+			//$chemin = config('images.path');
+
+			//$extension = $image->getClientOriginalExtension();
+
+			do {
+				$nom = str_random(10) . '.' . $extension;
+			} while(file_exists($chemin . '/' . $nom));
+
+			if($image->move($chemin, $nom)) {
+				return view('photo_ok');
+			}
+		}
+
+		return redirect('photo')
+			->with('error','Désolé mais votre image ne peut pas être envoyée !');
+	}
+	
     /**
      * Show the form for creating a new resource.
      *
