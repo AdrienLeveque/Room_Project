@@ -19,7 +19,6 @@
 		          <ul class="nav navbar-nav">
 		            <li> <a href="accueil">Accueil</a> </li>
 		            <li class="active"> <a href="connexion">Connexion</a></li>
-		            <li> <a href="inscription">Inscription</a> </li>
 		            <li> <a href="comment_ca_marche">Comment ça marche</a> </li>
 		            <li> <a href="contact">Contact</a> </li>
 		          </ul>
@@ -28,29 +27,32 @@
 		</div>
 
 		<div class="container">
-			<div class="col-md-6"> 
+			<div class="col-sm-6 col-md-6 col-ms-offset-3 col-md-offset-3"> 
 				<fieldset>
 					<legend>Connexion</legend>
 
 					<div class="panel panel-info">
-						<div class="panel-heading">Connexion</div>
 						<div class="panel-body"> 
-							{!! Form::open(['url' => 'contact']) !!}
+							{!! Form::open(['url' => 'accueil']) !!}
 								<div class="form-group {!! $errors->has('identifiant') ? 'has-error' : '' !!}">
 								<label>Identifiant: </label>
 									{!! Form::text('identifiant', null, ['class' => 'form-control', 'placeholder' => 'Votre identifiant']) !!}
 									{!! $errors->first('identifiant', '<small class="help-block">:message</small>') !!}
 								</div>
 								<div class="form-group {!! $errors->has('mdp') ? 'has-error' : '' !!}">
-								<label>Mot de passe: </label>
-									{!! Form::password('mdp', null, ['class' => 'form-control', 'placeholder' => 'Votre mot de passe']) !!}
-									{!! $errors->first('mdp', '<small class="help-block">:message</small>') !!}
+								<div class="col-md-12">
+									<label>Mot de passe: </label>
 								</div>
-								<div class="form-group {!! $errors->has('texte') ? 'has-error' : '' !!}">
-									{!! Form::textarea ('texte', null, ['class' => 'form-control', 'placeholder' => 'Votre message']) !!}
-									{!! $errors->first('texte', '<small class="help-block">:message</small>') !!}
+									<input type="password" class="form-control" name="password">
+
+									@if ($errors->has('password'))
+										<span class="help-block">
+											<strong>{{ $errors->first('password') }}</strong>
+										</span>
+									@endif
 								</div>
-								{!! Form::submit('Envoyer !', ['class' => 'btn btn-info pull-right']) !!}
+								{!! Form::submit('Connexion !', ['class' => 'btn btn-primary']) !!}
+								<a class="btn btn-primary" href="inscription" role="button">S'inscrire</a>
 							{!! Form::close() !!}
 						</div>
 					</div>
@@ -58,7 +60,7 @@
 					<div class="col-md-12"> 
 	    				 <ul>
 	    				 	</br>
-	   					 	<li><a href="inscription.php">S'inscrire</a></li>
+							<li><a href="inscription.php">S'inscrire</a></li>
 						 	<li><a href="#">Mot de passe oublié</a></li>
 	    				</ul>
 	    			</div> 

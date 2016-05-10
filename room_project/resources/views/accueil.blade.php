@@ -19,7 +19,6 @@
 		          <ul class="nav navbar-nav">
 		            <li class="active"> <a href="accueil">Accueil</a> </li>
 		            <li> <a href="connexion">Connexion</a></li>
-		            <li> <a href="inscription">Inscription</a> </li>
 		            <li> <a href="comment_ca_marche">Comment ça marche</a> </li>
 		            <li> <a href="contact">Contact</a> </li>
 		          </ul>
@@ -41,7 +40,7 @@
 			<br>
 			<section class="row">
 				<div class="col-md-12">
-					<div class="col-xs-4 col-md-4"><img src="cd ../cd ../images/images.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
+					<div class="col-xs-4 col-md-4"><img src="images/images.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
 					<div class="col-xs-4 col-md-4"><img src="images/images1.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
 					<div class="col-xs-4 col-md-4"><img src="images/images2.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
 					<div class="col-xs-4 col-md-4"><img src="images/images3.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>

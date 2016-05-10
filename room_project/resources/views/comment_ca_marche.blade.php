@@ -19,7 +19,6 @@
 		          <ul class="nav navbar-nav">
 		            <li> <a href="accueil">Accueil</a> </li>
 		            <li> <a href="connexion">Connexion</a></li>
-		            <li> <a href="inscription">Inscription</a> </li>
 		            <li class="active"> <a href="comment_ca_marche">Comment ça marche</a> </li>
 		            <li> <a href="contact">Contact</a> </li>
 		          </ul>
