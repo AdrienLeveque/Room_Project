@@ -11,16 +11,13 @@
 |
 */
 
-Route::resource('user', 'UserController');
+//Route::resource('user', 'UserController');
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('inscription', 'InscriptionController@getForm');
+Route::post('inscription', ['uses' => 'InscriptionController@postForm', 'as' => 'storeEmail']);
 
-
-
-
-
-
-
-
-});
+Route::get('comment_ca_marche', 'CommentCaMarcheController@index');
+Route::get('accueil', 'AccueilController@index');
+Route::get('contact', 'ContactController@index');
+Route::get('connexion', 'ConnexionController@getFrom');
+Route::post('connexion', 'ConnexionController@postForm');
