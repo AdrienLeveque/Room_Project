@@ -11,8 +11,14 @@
 |
 */
 
+//Route::get('email', 'EmailController@getForm');
+//Route::post('email', ['uses' => 'EmailController@postForm', 'as' => 'storeEmail']);
 //Route::resource('user', 'UserController');
-
+Route::get('consulter_salles', 'Consulter_sallesController@index');
+Route::get('client_reservation', 'Client_reservationController@index');
+Route::get('client_compte', 'Client_compteController@index');
+Route::get('client_contact', 'Client_contactController@index');
+Route::get('client_accueil', 'Client_accueilController@index');
 Route::get('inscription', 'InscriptionController@getForm');
 Route::post('inscription', ['uses' => 'InscriptionController@postForm', 'as' => 'storeEmail']);
 
