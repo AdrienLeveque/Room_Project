@@ -11,10 +11,10 @@
 |
 */
 
-//Route::get('email', 'EmailController@getForm');
-//Route::post('email', ['uses' => 'EmailController@postForm', 'as' => 'storeEmail']);
-//Route::resource('user', 'UserController');
-Route::get('consulter_salles', 'Consulter_sallesController@index');
+Route::get('client_reservation_paiement','Client_reservation_paiementController@index');
+Route::get('client_consulter_salles', 'Client_consulter_sallesController@index');
+Route::get('client_reservation_formulaire', 'Client_reservation_formulaireController@index');
+Route::get('client_reservation_salles', 'Client_reservation_sallesController@index');
 Route::get('client_reservation', 'Client_reservationController@index');
 Route::get('client_compte', 'Client_compteController@index');
 Route::get('client_contact', 'Client_contactController@index');
