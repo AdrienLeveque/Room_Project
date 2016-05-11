@@ -15,14 +15,14 @@ class MaterielReserve extends Migration
         Schema::create('materiel_reserve', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('abime');
-            $table->integer('reservation_id')->unsigned();
-            $table->integer('materiel_id')->unsigned();
+            $table->integer('id_reservation')->unsigned();
+            $table->integer('id_materiel')->unsigned();
         });
 
 
         Schema::table('materiel_reserve', function($table) {    
-            $table->foreign('reservation_id')->references('id')->on('reservation');
-            $table->foreign('materiel_id')->references('id')->on('materiel'); 
+            $table->foreign('id_reservation')->references('id')->on('reservation');
+            $table->foreign('id_materiel')->references('id')->on('materiel'); 
         });
     }
 
