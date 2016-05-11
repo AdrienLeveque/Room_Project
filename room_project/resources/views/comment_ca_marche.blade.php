@@ -52,26 +52,31 @@
 				<fieldset>
 					<legend>Horaire d'ouverture</legend>
 				</fieldset>
-				<div class="col-md-12">
-	 				<label>Lundi:</label>
-	 			</div>
+						<!--
+							<?php 
+								$Lundi = DB::table('horaire')->where('jour','lundi')->first();
+								if (is_null($Lundi)) { echo "Ferme";} else {
+									echo $Lundi->date_debut."h - ".$Lundi->date_fin."h";
+								}
+							?>
+						-->
 	 			<div class="col-md-12">
-	 				<label>Mardi:</label>
-	 			</div>
-	 			<div class="col-md-12">
-	 				<label>Mercredi:</label>
-	 			</div>
-	 			<div class="col-md-12">
-	 				<label>Jeudi:</label>
-	 			</div>	
-	 			<div class="col-md-12">
-	 				<label>Vendredi:</label>
-	 			</div>	
-	 			<div class="col-md-12">
-	 				<label>Samedi:</label>
-	 			</div>	
-	 			<div class="col-md-12">
-	 				<label>Dimanche:</label>
+					<?php 
+						$az = DB::table('horaire')->get();
+						foreach($az as $az){
+					?><div class="col-md-3">
+						<strong> <?php echo $az->jour.": ";?> </strong> <?php
+					?></div>
+					  <div class="col-md-4">
+					<?php 
+						if (($az->date_debut)==0||is_null($az->date_debut)) { echo "Ferme";} else {
+						echo $az->date_debut."h - ".$az->date_fin."h"."\r\n";
+						}			 
+					?></div>
+						<br/>
+					<?php 	
+						}
+					?>
 	 			</div>		 				 				 				 							
 			</div>
 		</div>
