@@ -44,13 +44,13 @@ INSERT INTO type_salle (libelle_type_salle) VALUES('grande');
 
 -- Salle
 INSERT INTO Salle (nom_salle, numero_salle, adresse_salle, capacite_salle, gardien_salle, 
-tarif_salle, caution_salle, id_type_salle, id_employe_salle) VALUES('A', 1, 'Université Paris-Sud 11, Bâtiment 640, 91400 Orsay', 100, true, 300, 100, 3, 1);
+tarif_salle, caution_salle, id_type_salle, image) VALUES('A', 1, 'Université Paris-Sud 11, Bâtiment 640, 91400 Orsay', 100, true, 300, 100, 3,'images.jpe');
 INSERT INTO Salle (nom_salle, numero_salle, adresse_salle, capacite_salle, gardien_salle, 
-tarif_salle, caution_salle, id_type_salle, id_employe_salle) VALUES('B', 2, 'Université Paris-Sud 11, Bâtiment 640, 91400 Orsay', 50, false, 200, 100, 2, null);
+tarif_salle, caution_salle, id_type_salle, image) VALUES('B', 2, 'Université Paris-Sud 11, Bâtiment 640, 91400 Orsay', 50, false, 200, 100, 2,'images1.jpe');
 INSERT INTO Salle (nom_salle, numero_salle, adresse_salle, capacite_salle, gardien_salle, 
-tarif_salle, caution_salle, id_type_salle, id_employe_salle) VALUES('C', 3, 'Université Paris-Sud 11, Bâtiment 640, 91400 Orsay', 100, true, 500, 200, 1, 1);
+tarif_salle, caution_salle, id_type_salle,image) VALUES('C', 3, 'Université Paris-Sud 11, Bâtiment 640, 91400 Orsay', 100, true, 500, 200, 1,'images2.jpe');
 INSERT INTO Salle (nom_salle, numero_salle, adresse_salle, capacite_salle, gardien_salle, 
-tarif_salle, caution_salle, id_type_salle, id_employe_salle) VALUES('D', 4, 'Université Paris-Sud 11, Bâtiment 640, 91400 Orsay', 100, true, 500, 200, 1, 1);
+tarif_salle, caution_salle, id_type_salle,image) VALUES('D', 4, 'Université Paris-Sud 11, Bâtiment 640, 91400 Orsay', 100, true, 500, 200, 1,'images3.jpe');
 
 -- Salle_clef
 INSERT INTO Salle_clef (id_clef, id_salle) VALUES(1, 1);
@@ -75,3 +75,8 @@ INSERT INTO materiel(libelle_materiel, caution_materiel) VALUES ("téléviseur",
 INSERT INTO materiel_reservee(id_reservation, id_salle, id_materiel, abime) VALUES (null, 1, 1, false);
 INSERT INTO materiel_reservee(id_reservation, id_salle, id_materiel, abime) VALUES (null, 1, 2, false);
 INSERT INTO materiel_reservee(id_reservation, id_salle, id_materiel, abime) VALUES (1, null, 1, false);
+
+-- salle_matériel
+INSERT INTO salle_materiel(id_salle,id_materiel) VALUES(1,1);
+INSERT INTO salle_materiel(id_salle,id_materiel) VALUES(1,2);
+INSERT INTO salle_materiel(id_salle,id_materiel) VALUES(1,3);

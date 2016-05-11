@@ -14,20 +14,13 @@ class Employe extends Migration
     {
         Schema::create('employe', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nom');
-            $table->string('prenom');
-            $table->string('adresse');
-            $table->string('telephone');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
-            $table->integer('type_employe_id')->unsigned();
+            $table->integer('id_user')->unsigned();
+            $table->integer('id_type_employe')->unsigned();
         });
 
-
-        Schema::table('employe', function($table) {    
-            $table->foreign('type_employe_id')->references('id')->on('type_employe');
+		Schema::table('employe', function($table) {    
+            $table->foreign('id_user')->references('id')->on('users'); 
+            $table->foreign('id_type_employe')->references('id')->on('type_employe');
         });
     }
 

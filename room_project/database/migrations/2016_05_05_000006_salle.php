@@ -14,21 +14,20 @@ class Salle extends Migration
     {
         Schema::create('salle', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nom');
-            $table->integer('numero');
-            $table->string('adresse');
-            $table->float('tarif');
-            $table->float('caution');
-            $table->boolean('possede_gardien');
-            $table->integer('capacite');
-            $table->integer('type_salle_id')->unsigned();
-            $table->integer('employe_salle_id')->unsigned();
+            $table->string('nom_salle');
+            $table->integer('numero_salle');
+            $table->string('adresse_salle');
+            $table->float('tarif_salle');
+            $table->float('capacite_salle');
+            $table->boolean('gardien_salle');
+            $table->integer('caution_salle');
+			$table->string('image');
+            $table->integer('id_type_salle')->unsigned();
         });
 
 
         Schema::table('salle', function($table) {    
-            $table->foreign('type_salle_id')->references('id')->on('type_salle'); 
-            $table->foreign('employe_salle_id')->references('id')->on('employe');
+            $table->foreign('id_type_salle')->references('id')->on('type_salle'); 
         });
     }
 

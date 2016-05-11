@@ -14,8 +14,8 @@ class TypeEmploye extends Migration
     {
          Schema::create('type_employe', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('libelle');
-            $table->float('reduction');
+            $table->string('libelle_type_employe');
+            $table->float('reduction_type_employe');
         });
     }
 

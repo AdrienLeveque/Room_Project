@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Materiel extends Migration
+class Mairie extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,14 @@ class Materiel extends Migration
      */
     public function up()
     {
-        Schema::create('materiel', function (Blueprint $table) {
+        Schema::create('mairie', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('libelle_materiel');
-            $table->float('caution_materiel');
+			$table->string('libele');
+			$table->string('adresse');
+			$table->string('code_postal');
+			$table->string('ville');
+            $table->string('telephone');
+            $table->string('email');
         });
     }
 
@@ -26,6 +30,6 @@ class Materiel extends Migration
      */
     public function down()
     {
-        Schema::drop('materiel');
+         Schema::drop('mairie');
     }
 }
