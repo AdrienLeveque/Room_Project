@@ -14,14 +14,14 @@ class SalleClef extends Migration
     {
          Schema::create('salle_clef', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('clef_id')->unsigned();
-            $table->integer('salle_id')->unsigned();
+            $table->integer('id_clef')->unsigned();
+            $table->integer('id_salle')->unsigned();
         });
 
 
         Schema::table('salle_clef', function($table) {    
-            $table->foreign('clef_id')->references('id')->on('clef'); 
-            $table->foreign('salle_id')->references('id')->on('salle');
+            $table->foreign('id_clef')->references('id')->on('clef'); 
+            $table->foreign('id_salle')->references('id')->on('salle');
         });
     }
 

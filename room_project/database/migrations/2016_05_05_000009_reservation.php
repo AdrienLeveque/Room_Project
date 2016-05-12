@@ -17,16 +17,16 @@ class Reservation extends Migration
             $table->date('date_debut');
             $table->date('date_fin');
             $table->boolean('etat_des_lieux_effectue');
-            $table->integer('user_id')->unsigned();
-            $table->integer('employe_id')->unsigned();
-            $table->integer('salle_reserve_id')->unsigned();
+            $table->integer('id_user')->unsigned();
+            $table->integer('id_employe')->unsigned();
+            $table->integer('id_salle_reservation')->unsigned();
         });
 
 
         Schema::table('reservation', function($table) {    
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('employe_id')->references('id')->on('employe');
-            $table->foreign('salle_reserve_id')->references('id')->on('salle');
+            $table->foreign('id_user')->references('id')->on('users');
+            $table->foreign('id_employe')->references('id')->on('employe');
+            $table->foreign('id_salle_reservation')->references('id')->on('salle');
         });
     }
 
