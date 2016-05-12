@@ -66,11 +66,11 @@ INSERT INTO Salle_clef (id_clef, id_salle) VALUES(3, 2);
 INSERT INTO Salle_clef (id_clef, id_salle) VALUES(4, 3);
 
 -- matériel
-INSERT INTO materiel(libelle_materiel, caution_materiel) VALUES ("chaise", 20);
-INSERT INTO materiel(libelle_materiel, caution_materiel) VALUES ("table", 30);
-INSERT INTO materiel(libelle_materiel, caution_materiel) VALUES ("ordinateur", 300);
-INSERT INTO materiel(libelle_materiel, caution_materiel) VALUES ("video-projecteur", 100);
-INSERT INTO materiel(libelle_materiel, caution_materiel) VALUES ("téléviseur", 200 );
+INSERT INTO materiel(libelle_materiel, caution_materiel, quantite) VALUES ("chaise", 20, 20);
+INSERT INTO materiel(libelle_materiel, caution_materiel, quantite) VALUES ("table", 30, 30);
+INSERT INTO materiel(libelle_materiel, caution_materiel, quantite) VALUES ("ordinateur", 300, 40);
+INSERT INTO materiel(libelle_materiel, caution_materiel, quantite) VALUES ("video-projecteur", 100, 50);
+INSERT INTO materiel(libelle_materiel, caution_materiel, quantite) VALUES ("téléviseur", 200, 60);
 
 -- Reservation
 INSERT INTO reservation(date_debut, date_fin, etat_des_lieux_effectue, id_user, id_employe, id_salle_reservation) VALUES ('2016-04-02' ,'2016-04-04', false , 1, 1, 1);

@@ -16,6 +16,7 @@ class Materiel extends Migration
             $table->increments('id');
             $table->string('libelle_materiel');
             $table->float('caution_materiel');
+			$table->integer('quantite');
         });
     }
 
