@@ -19,11 +19,18 @@ Route::get('client_reservation', 'Client_reservationController@index');
 Route::get('client_compte', 'Client_compteController@index');
 Route::get('client_contact', 'Client_contactController@index');
 Route::get('client_accueil', 'Client_accueilController@index');
-Route::get('inscription', 'InscriptionController@getForm');
-Route::post('inscription', ['uses' => 'InscriptionController@postForm', 'as' => 'storeEmail']);
 
-Route::get('comment_ca_marche', 'CommentCaMarcheController@index');
-Route::get('accueil', 'AccueilController@index');
-Route::get('contact', 'ContactController@index');
-Route::get('connexion', 'ConnexionController@getFrom');
-Route::post('connexion', 'ConnexionController@postForm');
+Route::get('/a_propos', 'A_proposController@index');
+Route::get('/accueil', 'AccueilController@index');
+
+Route::get('contact', 'ContactController@getForm');
+Route::post('contact', 'ContactController@postForm');
+
+
+
+Route::auth();
+
+Route::get('/', function () {
+    return view('accueil');
+});
+

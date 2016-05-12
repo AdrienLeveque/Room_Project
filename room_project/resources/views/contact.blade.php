@@ -1,32 +1,41 @@
-@extends('template')
+@extends('layouts.app')
 
-@section('contenu')	
+@section('accueil')  @endsection
+
+@section('a_propos')  @endsection  
+
+@section('contact') class="active" @endsection
+
+@section('connexion')  @endsection
+
+@section('inscription')  @endsection
+
+@section('deconnection')  @endsection
+
+@section('content')	
 <!-- Titre -->
 	 <div class="container">
-	 	  <div class="col-md-offset-3">
-			<h1><strong> Reservation de votre salle en ligne</strong></h1>
+	</br>	     
+	<div class="col-md-8 col-md-offset-2">
+		<div class="panel panel-default">
+			<div class="panel-heading">Contactez-moi</div>
+			<div class="panel-body"> 
+				{!! Form::open(['url' => 'contact']) !!}
+					<div class="form-group {!! $errors->has('nom') ? 'has-error' : '' !!}">
+						{!! Form::text('nom', null, ['class' => 'form-control', 'placeholder' => 'Votre nom']) !!}
+						{!! $errors->first('nom', '<small class="help-block">:message</small>') !!}
+					</div>
+					<div class="form-group {!! $errors->has('email') ? 'has-error' : '' !!}">
+						{!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Votre email']) !!}
+						{!! $errors->first('email', '<small class="help-block">:message</small>') !!}
+					</div>
+					<div class="form-group {!! $errors->has('texte') ? 'has-error' : '' !!}">
+						{!! Form::textarea ('texte', null, ['class' => 'form-control', 'placeholder' => 'Votre message']) !!}
+						{!! $errors->first('texte', '<small class="help-block">:message</small>') !!}
+					</div>
+					{!! Form::submit('Envoyer !', ['class' => 'btn btn-primary pull-right']) !!}
+				{!! Form::close() !!}
+			</div>
 		</div>
-	</div>
-	</br>
-
-<!-- Barre de navigation -->
-			<div class="container">
-		    <nav class="navbar navbar-default">
-		      	<div class="navbar-header">
-  					<a class="navbar-brand" href="#">Utilisateur non enregistré: </a>
-  				</div>
-		        <div class="container-fluid">
-		          <ul class="nav navbar-nav">
-		            <li> <a href="accueil">Accueil</a> </li>
-		            <li> <a href="connexion">Connexion</a></li>
-		            <li> <a href="comment_ca_marche">Informations</a> </li>
-		            <li class="active"> <a href="contact">Contact</a> </li>
-		          </ul>
-		        </div>
-		     </nav>
-
-		     <img src="images/t1.jpg" class="img-responsive" alt="Responsive image" width="1140px"> </br>
-		</div>
-
-		
-@stop
+	</div>		
+@endsection

@@ -1,34 +1,38 @@
-@extends('template')
+@extends('layouts.app')
 
-@section('contenu')	
+@section('accueil') class="active" @endsection
+
+@section('a_propos')  @endsection  
+
+@section('contact')  @endsection
+
+@section('connexion')  @endsection
+
+@section('inscription')  @endsection
+
+@section('deconnection')  @endsection
+
+@section('content')	
+
+<style>
+.carousel-page
+{
+width:100%;
+height:400px;
+background-color:#5f666d;
+color:white;
+}
+</style>
 <!-- Titre -->
 	 <div class="container">
 	 	  <div class="col-md-offset-3">
 			<h1><strong> Reservation de votre salle en ligne</strong></h1>
 		</div>
 	</div>
-	</br>
-
-<!-- Barre de navigation -->
-		<div class="container">
-		    <nav class="navbar navbar-default">
-		      	<div class="navbar-header">
-  					<a class="navbar-brand" href="#">Utilisateur non enregistré: </a>
-  				</div>
-		        <div class="container-fluid">
-		          <ul class="nav navbar-nav">
-		            <li class="active"> <a href="accueil">Accueil</a> </li>
-		            <li> <a href="connexion">Connexion</a></li>
-		            <li> <a href="comment_ca_marche">Comment ça marche</a> </li>
-		            <li> <a href="contact">Contact</a> </li>
-		          </ul>
-		        </div>
-		     </nav>
-		</div>
-		
+	</br>		
 		<div class="container">
 			<section class="row">
-				<div class="col-xs-offset-2 col-xs-8 col-md-offset-2 col-md-8">
+				<div class="col-xs-offset-4 col-xs-8 col-md-offset-1 col-md-10">
 				<br>
 					<legend class="text-center padding">LOCATION DE SALLES À ORSAY</legend>
 					<p class="text-justify">Tous les grands événements sont liés à des lieux d'émotions exceptionnels... Au travers des salles Parisiennes remarquables, votre événement prendra toute sa grandeur.
@@ -38,22 +42,47 @@
 			</section>
 			<br>
 			<br>
-			<section class="row">
-				<div class="col-md-12">
-					<div class="col-xs-4 col-md-4"><img src="images/images.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
-					<div class="col-xs-4 col-md-4"><img src="images/images1.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
-					<div class="col-xs-4 col-md-4"><img src="images/images2.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
-					<div class="col-xs-4 col-md-4"><img src="images/images3.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
-					<div class="col-xs-4 col-md-4"><img src="images/images5.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
-					<div class="col-xs-4 col-md-4"><img src="images/images6.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
-					<div class="col-xs-4 col-md-4"><img src="images/images7.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
-					<div class="col-xs-4 col-md-4"><img src="images/images11.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
-					<div class="col-xs-4 col-md-4"><img src="images/images12.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
-					<div class="col-xs-4 col-md-4"><img src="images/images13.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
-					<div class="col-xs-4 col-md-4"><img src="images/images8.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
-					<div class="col-xs-4 col-md-4"><img src="images/images9.jpe" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></div>
-				</div>
-			</section>
+		<div id="my_carousel" class="carousel slide" data-ride="carousel">
+		<!-- Bulles -->
+		<ol class="carousel-indicators">
+			<li data-target="#my_carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#my_carousel" data-slide-to="1"></li>
+			<li data-target="#my_carousel" data-slide-to="2"></li>
+		</ol>
+		<!-- Slides -->
+		<div class="carousel-inner">
+			<!-- Page 1 -->
+			<div class="item active">  
+				<div class="carousel-page">
+					<img src="images/images19.jpg" class="img-responsive" style="margin:0px auto;" />
+				</div> 
+				<div class="carousel-caption">Salle 1</div>
+			</div>   
+			<!-- Page 2 -->
+			<div class="item"> 
+				<div class="carousel-page"><img src="images/images21.jpg" class="img-responsive img-rounded" 
+				style="margin:0px auto;"  /></div> 
+				<div class="carousel-caption">Salle 2</div>
+			</div>  
+			<!-- Page 3 -->
+			<div class="item">  
+				<div class="carousel-page">
+					<img src="images/images23.jpg" class="img-responsive img-rounded" 
+					style="margin:0px auto;"  />
+				</div>  
+				<div class="carousel-caption">Salle 3</div>
+			</div>     
+			</div>
+			<!-- Contrôles -->
+			<a class="left carousel-control" href="#my_carousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#my_carousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+			</div>
+
+
 		</div>
 		
-@stop	
+@endsection

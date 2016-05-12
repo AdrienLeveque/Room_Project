@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class CommentCaMarcheController extends Controller
+class A_proposController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class CommentCaMarcheController extends Controller
     public function index()
     {
 		//$adrien = DB::table('horaire')->where('jour','vendredi')->value('date_debut');
-        return view('comment_ca_marche');
+        return view('a_propos');
     }
 
 }

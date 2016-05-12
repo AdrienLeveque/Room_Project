@@ -15,7 +15,7 @@ class Client_reservationController extends Controller
      */
     public function index()
     {
-        return view('client_reservation');
+        return view('client/client_reservation');
     }
 
     /**
