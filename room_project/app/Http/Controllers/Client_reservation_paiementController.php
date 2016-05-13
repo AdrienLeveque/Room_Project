@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
+use Illuminate\Contracts\Validation\Validator;
+use App\Http\Requests\AssuranceRequest;
+use App\Http\Requests\PaiementRequest;
 
 class Client_reservation_paiementController extends Controller
 {
@@ -18,6 +19,12 @@ class Client_reservation_paiementController extends Controller
         return view('client_reservation_paiement');
     }
 
+	public function postForm( AssuranceRequest $request
+			) //Maintenant le modèle est injecté dans la méthode
+	{
+		
+		return view('/');
+	}
     /**
      * Show the form for creating a new resource.
      *
@@ -34,9 +41,19 @@ class Client_reservation_paiementController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PaiementRequest $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+		'type_carte' => 'required|alpha',
+		'numero_carte' => 'required|size:16|alpha_num',
+		'cryptogramme' => 'required|max:255|alpha_num'
+		]);
+		
+		if( $validator->fails()){
+			return redirect('post/create')
+			->withErros($validator)
+			->withInput();
+		}
     }
 
     /**

@@ -6,6 +6,8 @@
 
 @section('contact') class="active" @endsection
 
+@section('client_consulter_salles')  @endsection
+
 @section('connexion')  @endsection
 
 @section('inscription')  @endsection

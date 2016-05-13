@@ -12,6 +12,8 @@
 */
 
 Route::get('client_reservation_paiement','Client_reservation_paiementController@index');
+Route::post('client_reservation_paiement','Client_reservation_paiementController@postForm');
+
 Route::get('client_consulter_salles', 'Client_consulter_sallesController@index');
 Route::get('client_reservation_formulaire', 'Client_reservation_formulaireController@index');
 Route::post('client_reservation_formulaire', 'Client_reservation_formulaireController@postForm');

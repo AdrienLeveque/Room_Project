@@ -1,30 +1,18 @@
-<?php $__env->startSection('contenu'); ?>
+<?php $__env->startSection('accueil'); ?>  <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('a_propos'); ?>  <?php $__env->stopSection(); ?>  
+
+<?php $__env->startSection('client_consulter_salles'); ?> class="active" <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('contact'); ?>  <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('connexion'); ?>  <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('inscription'); ?>  <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('deconnection'); ?>  <?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
 <!-- Titre -->
-	 <div class="container">
-	 	  <div class="col-md-offset-3">
-			<h1><strong> Reservation de votre salle en ligne</strong></h1>
-		</div>
-	</div>
-	</br>
-
-<!-- Barre de navigation -->
-			<div class="container">
-		    <nav class="navbar navbar-default">
-		      	<div class="navbar-header">
-  					<a class="navbar-brand" href="#">Client: </a>
-  				</div>
-		        <div class="container-fluid">
-		          <ul class="nav navbar-nav">
-		            <li> <a href="client_accueil">Accueil</a> </li>
-		            <li class="active"> <a href="client_consulter_salles">Consulter les salles</a></li>
-		            <li> <a href="client_reservation">Mes reservations</a> </li>
-		            <li> <a href="client_compte">Mon compte</a> </li>
-		            <li> <a href="client_contact">Contact</a> </li>
-		          </ul>
-		        </div>
-		     </nav>
-		</div>
-
 		<div class="container">
 			<form action="reservation_paiement.php" method="post">
 				<div class="col-md-12">
@@ -40,10 +28,26 @@
 					$idSalle=$infosSalle->id;
 					?>
 					<div class="col-xs-4 col-md-4">
-						<a href="client_reservation_salles?id=<?php echo $idSalle; ?>"> <img src="images/<?php echo $pathSalle ?>" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></a>
-						<label><?php if(!is_null($nomSalle)) echo $nomSalle ?></label>
-						<label><?php if(!is_null($capaciteSalle))echo $capaciteSalle ?></label>
-						<label><?php if(!is_null($cautionSalle))echo $cautionSalle ?></label>
+						<div class="col-md-12">
+							<div class="col-md-1"></div>
+							<div class="col-md-11">
+							<a href="client_reservation_salles?id=<?php echo $idSalle; ?>"> <img src="images/<?php echo $pathSalle ?>" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></a>
+							<label>
+								Nom: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<?php if(!is_null($nomSalle)) echo $nomSalle ?>
+							</label>
+							</br>
+							<label>
+								Capacite: &nbsp;
+								<?php if(!is_null($capaciteSalle))echo $capaciteSalle ?>
+							</label>
+							</br>
+							<label>
+								Caution: &nbsp;&nbsp;&nbsp;
+									<?php if(!is_null($cautionSalle))echo $cautionSalle ?>
+							</label>
+						</div>
+						</div>
 					</div>
 				<?php
 					}
@@ -55,4 +59,4 @@
 			</form>
 		</div>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

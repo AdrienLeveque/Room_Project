@@ -59,8 +59,10 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li @yield('accueil')><a href="{{ url('/accueil') }}">Accueil</a></li>
+					<li @yield('client_consulter_salles')><a href="{{ url('/client_consulter_salles') }}">Consulter les salles</a></li>
                     <li @yield('a_propos')><a href="{{ url('/a_propos') }}">A propos</a></li>
                     <li @yield('contact')><a href="{{ url('/contact') }}">Contact</a></li>
+					
                 </ul>
 
                 <!-- Right Side Of Navbar -->
