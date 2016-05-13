@@ -31,19 +31,24 @@
 					?>
 					<div class="col-xs-4 col-md-4">
 						<div class="col-md-12">
+							<div class="col-md-1"></div>
+							<div class="col-md-11">
 							<a href="client_reservation_salles?id=<?php echo $idSalle; ?>"> <img src="images/<?php echo $pathSalle ?>" class="img-thumbnail img-responsive center-block" alt="Responsive image" style="margin-bottom: 2%;"></a>
 							<label>
-								<div class="col-md-4">Nom: </div> 
+								Nom: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								<?php if(!is_null($nomSalle)) echo $nomSalle ?>
 							</label>
+							</br>
 							<label>
-								<div class="col-md-4">Capacite: </div>
+								Capacite: &nbsp;
 								<?php if(!is_null($capaciteSalle))echo $capaciteSalle ?>
 							</label>
+							</br>
 							<label>
-								<div class="col-md-4">Caution :</div>
+								Caution: &nbsp;&nbsp;&nbsp;
 									<?php if(!is_null($cautionSalle))echo $cautionSalle ?>
 							</label>
+						</div>
 						</div>
 					</div>
 				<?php
