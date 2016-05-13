@@ -22,20 +22,23 @@
 				<fieldset>
 					<legend>Information à propos de la Mairie</legend>
 				</fieldset>
+				<?php 
+						$InfoMairie = DB::table('mairie')->first();
+				?>
 				<div class="col-md-12">
 	 				<label>Adresse :</label>
 	 				<address>
-						  1355 Market Street, Suite 900<br>
-						  San Francisco, CA 94103<br>
-						  <abbr title="Phone">P:</abbr> (123) 456-7890
+						 <?php echo $InfoMairie->adresse ;?> <br>  
+						 <?php echo $InfoMairie->code_postal ;?>  <?php echo $InfoMairie->ville ;?>
 					</address>
 	 			</div>
 	 			<div class="col-md-12">
 	 				<label>Téléphone:</label>
-					
+					 <?php echo $InfoMairie->telephone ;?><br>
 	 			</div>
 	 			<div class="col-md-12">
 	 				<label>Couriel:</label>
+	 				 <?php echo $InfoMairie->email ;	?><br>
 	 			</div>
 			</div>
 
@@ -43,14 +46,7 @@
 				<fieldset>
 					<legend>Horaire d'ouverture</legend>
 				</fieldset>
-						<!--
-							<?php 
-								$Lundi = DB::table('horaire')->where('jour','lundi')->first();
-								if (is_null($Lundi)) { echo "Ferme";} else {
-									echo $Lundi->date_debut."h - ".$Lundi->date_fin."h";
-								}
-							?>
-						-->
+
 	 			<div class="col-md-12">
 					<?php 
 						$az = DB::table('horaire')->get();
@@ -58,11 +54,21 @@
 					?><div class="col-md-3">
 						<strong> <?php echo $az->jour.": ";?> </strong> <?php
 					?></div>
-					  <div class="col-md-4">
+					  <div class="col-md-8">
 					<?php 
-						if (($az->date_debut)==0||is_null($az->date_debut)) { echo "Ferme";} else {
-						echo $az->date_debut."h - ".$az->date_fin."h"."\r\n";
-						}			 
+						if (($az->date_debut_matin)==0||is_null($az->date_debut_matin)) { echo "Ferme \r\n";} else {
+							echo $az->date_debut_matin."h - ".$az->date_fin_matin."h"."\r\n";
+						}		
+
+						if (($az->date_debut_soir)==0||is_null($az->date_debut_soir)) { 
+							if (($az->date_debut_matin)==0||is_null($az->date_debut_matin))
+								{echo " ";}
+							else  {echo "Ferme";}
+						}
+						else {
+							echo "\r\n"."/"."\r\n".$az->date_debut_soir."h - ".$az->date_fin_soir."h"."\r\n";
+						}	
+
 					?></div>
 						<br/>
 					<?php 	
