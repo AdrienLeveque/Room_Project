@@ -60,6 +60,8 @@
                 <ul class="nav navbar-nav">
                     <li @yield('accueil')><a href="{{ url('/accueil') }}">Accueil</a></li>
 					<li @yield('client_consulter_salles')><a href="{{ url('/client_consulter_salles') }}">Consulter les salles</a></li>
+					<li @yield('client_mon_compte')><a href="{{ url('/client_mon_compte') }}">Mon compte</a></li>
+					<li @yield('client_mes_reservations')><a href="{{ url('/client_mes_reservations') }}">Mes reservations</a></li>
                     <li @yield('a_propos')><a href="{{ url('/a_propos') }}">A propos</a></li>
                     <li @yield('contact')><a href="{{ url('/contact') }}">Contact</a></li>
 					
