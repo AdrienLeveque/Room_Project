@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\AssuranceRequest;
-use App\Http\Requests\ClefRequest;
+use App\Client_reservation_formulaire;
+use App\Client_reservation_materiel;
+use DB;
 
 class Client_reservation_formulaireController extends Controller
 {
@@ -19,7 +21,8 @@ class Client_reservation_formulaireController extends Controller
     }
 
 	public function postForm(AssuranceRequest $request,
-	ClefRequest $request
+	Client_reservation_formulaire $reservation,
+	Client_reservation_materiel $materiel_reserve
 	)
 	{
 		$pdf = $request->file('Assurance');
@@ -38,12 +41,38 @@ class Client_reservation_formulaireController extends Controller
 
 			if($pdf->move($chemin, $nom) && $pdf1->move($chemin, $nom1)) {
 				
-				/*$data = array(
-					'name'  => 'Raphael',
-					'age'   => 18,
-					'email' => 'r.mobis@rmobis.com'  */
-				//echo Input::get('idSalle');
-				return View('client_reservation_paiement');
+				$reservation->date_debut = $request->input('date_debut'); 
+				$reservation->date_fin = $request->input('date_fin'); ;
+				$reservation->etat_des_lieux_effectue = 0;
+				$reservation->id_user = $request->input('id_user'); 
+				$reservation->id_employe = null;
+				$reservation->id_salle_reservation = $request->input('id_salle'); 
+				$reservation->valide = 0;
+				$reservation->save();
+				
+				
+				$nb_des_materiels=$request->input('nb_des_materiels');
+				$id_reservation = DB::table('reservation')
+								->select('id')
+								->where('id_user','=',$request->input('id_user'))
+								->where('id_salle_reservation','=',$request->input('id_salle'))
+								->orderBy('id', 'desc')
+								->first(); 
+				 
+				
+				$infosMateriel = DB::table('materiel')
+											->get(); 
+				foreach($infosMateriel as $infosMateriel){
+					$libelle_materiel=$infosMateriel->libelle_materiel;
+					$unite= $request->input($libelle_materiel);
+						for($i = 0; $i <$unite; $i++){
+							DB::insert('insert into materiel_reserve(abime, id_reservation, id_materiel) values(?,?,?)', array(0,$id_reservation->id,$infosMateriel->id));			
+						}	
+				}
+				
+				//$formData=$request->input('id_salle'); // Request facade
+				$url='client_reservation_paiement?id='.$id_reservation->id; 
+				return redirect($url);
 			}
 		}
 

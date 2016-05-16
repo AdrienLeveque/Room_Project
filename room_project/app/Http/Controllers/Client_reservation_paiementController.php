@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Contracts\Validation\Validator;
 use App\Http\Requests\AssuranceRequest;
 use App\Http\Requests\PaiementRequest;
+use DB;
 
 class Client_reservation_paiementController extends Controller
 {
@@ -19,11 +20,28 @@ class Client_reservation_paiementController extends Controller
         return view('client_reservation_paiement');
     }
 
-	public function postForm( AssuranceRequest $request
-			) //Maintenant le modèle est injecté dans la méthode
+	public function postForm( PaiementRequest $request
+	) 		
 	{
 		
-		return view('/');
+		$id_reservation = DB::table('banque')
+						->where('annee','=',$request->input('annee'))
+						->where('mois','=',$request->input('mois'))
+						->where('code_verification','=',$request->input('code_verification'))
+						->where('numero_carte','=',$request->input('numero_carte'))
+						->where('type_carte','=',$request->input('type_carte'))
+						->count(); 
+					 
+		if($id_reservation==0){
+			return view('paiementPasOK');
+		}else{
+			$reservation = DB::table('reservation')
+						->where('id','=',$request->input('id_reservation'))
+						->update(['valide' => true]);
+						
+			return view('paiementOK');
+		}
+		
 	}
     /**
      * Show the form for creating a new resource.

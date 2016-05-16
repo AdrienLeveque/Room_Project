@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class AssuranceRequest extends Request
+class Admin_salleRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,10 +23,13 @@ class AssuranceRequest extends Request
      */
     public function rules()
     {
-       return ['Assurance' => 'required|mimes:pdf',
-	   'Clef' => 'required|mimes:pdf',
-	   'date_debut' => 'required',
-	   'date_fin' => 'required'
-	   ];
+        return [
+		'nom_salle' => 'required|alpha',
+		'numero_salle' => 'required|numeric',
+		'adresse_salle' => 'required|alpha',
+		'tarif_salle' => 'required|numeric',
+		'capacite_salle' => 'required|numeric',
+		'caution_salle' => 'required|numeric'
+		];
     }
 }

@@ -18,6 +18,7 @@ class Client_consulter_sallesController extends Controller
         return view('client_consulter_salles');
     }
 
+	
     /**
      * Show the form for creating a new resource.
      *

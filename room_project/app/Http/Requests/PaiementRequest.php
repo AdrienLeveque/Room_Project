@@ -26,7 +26,8 @@ class PaiementRequest extends Request
         return [
 		'type_carte' => 'required|alpha',
 		'numero_carte' => 'required|size:16|alpha_num',
-		'cryptogramme' => 'required|max:255|alpha_num'
+		'mois' => 'required|numeric',
+		'annee' => 'required|numeric'
 		];
     }
 }

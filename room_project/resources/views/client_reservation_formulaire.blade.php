@@ -16,7 +16,7 @@
 @section('content')
 <!-- Titre -->
 		<div class="container">
-		{!! Form::open(['url' => 'client_reservation_1', 'files' => true]) !!}
+		{!! Form::open(['url' => 'client_reservation_formulaire','files' => true]) !!}
 				<?php
 					$idUser=Auth::user()->id;
 					$idSalle=$_GET['id'];
@@ -116,11 +116,35 @@
 					<input type="HIDDEN" name="nb_des_materiels" value="<?php echo $nb_des_materiels ?>">
 					<input type="HIDDEN" name="id_salle" value="<?php echo $idSalle ?>">
 					<input type="HIDDEN" name="id_user" value="<?php echo $idUser ?>">
+					
 					<div class="col-md-12">
-						</br></br>
-						{!! Form::submit('Etape suivante !', ['class' => 'btn btn-primary']) !!}
-						{!! Form::close() !!}
+						<div class="col-md-3"></div>
+						<div class="col-md-6">
+							<div class="col-md-4"> Date debut reservation </div>
+							<div class="col-md-8">
+								<div class="form-group {!! $errors->has('date_debut') ? 'has-error' : '' !!}">
+									{!! Form::date('date_debut', null, array('class' => 'form-control', 'placeholder' => 'Entrez votre mot de passe')) !!}
+									{!! $errors->first('date_debut', '<small class="help-block">:message</small>') !!}
+								</div>
+								
+							</div>
+						</div>
 					</div>
+					<div class="col-md-12">
+						<div class="col-md-3"></div>
+						<div class="col-md-6">
+							<div class="col-md-4"> Date fin reservation </div>
+							<div class="col-md-8">
+								<div class="form-group {!! $errors->has('date_fin') ? 'has-error' : '' !!}">
+									{!! Form::date('date_fin', null, array('class' => 'form-control', 'placeholder' => 'Entrez votre mot de passe')) !!}
+									{!! $errors->first('date_fin', '<small class="help-block">:message</small>') !!}
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					{!! Form::submit('Etape suivante !', ['class' => 'btn btn-info center-block']) !!}
+					{!! Form::close() !!}
 				</div>
 			</form>
 		</div>

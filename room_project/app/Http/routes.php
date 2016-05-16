@@ -10,6 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('admin_salle','Admin_salleController@index');
+Route::post('admin_salle','Admin_salleController@postForm');
+
 Route::get('client_mon_compte','Client_mon_compteController@index');
 Route::get('client_mes_reservations','Client_mes_reservationsController@index');
 

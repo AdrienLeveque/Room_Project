@@ -17,7 +17,7 @@
 <!-- Titre -->
 
 		<div class="container">
-			<form action="reservation_formulaire.php" method="post">
+			
 				<div class="col-md-12">
 					<?php 
 						$idSalle=$_GET['id'];
@@ -81,9 +81,9 @@
 					</div>
 					<div class="col-md-12">
 					</br></br>
- 					<a class="btn btn-primary" href="client_reservation_formulaire?id=<?php echo $idSalle; ?>" role="button">Etape suivante</a>
+ 					<a class="btn btn-info" href="client_reservation_formulaire?id=<?php echo $idSalle; ?>" role="button">Etape suivante</a>
 					</div>
 				</div>
-			</form>
+			
 		</div>
 @stop

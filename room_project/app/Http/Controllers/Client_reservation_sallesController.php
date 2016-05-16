@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Auth;
 
 class Client_reservation_sallesController extends Controller
 {
@@ -18,6 +19,23 @@ class Client_reservation_sallesController extends Controller
                return view('client_reservation_salles');
     }
 
+	public function postForm(Request $request,
+	Client_reservation_salles $reservation){
+		
+				//$reservation->date_debut = date("Y-m-d");
+				//$reservation->date_fin = date("Y-m-d");
+				$reservation->etat_des_lieux_effectue = 0;
+				$reservation->id_user = Auth::user()->id;//$request->input('id_user'); 
+				$reservation->id_employe = null;
+				$reservation->id_salle_reservation = $request->input('id_salle'); 
+				$reservation->save();
+		
+		
+		$idSalle=$request->input('id_salle');
+		$url='client_reservation_formulaire?id='.$idSalle;
+		
+		return redirect($url);
+	}
     /**
      * Show the form for creating a new resource.
      *
