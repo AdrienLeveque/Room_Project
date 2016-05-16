@@ -16,8 +16,9 @@
 @section('content')
 <!-- Titre -->
 		<div class="container">
-		{!! Form::open(['url' => 'client_reservation_formulaire', 'files' => true]) !!}
+		{!! Form::open(['url' => 'client_reservation_1', 'files' => true]) !!}
 				<?php
+					$idUser=Auth::user()->id;
 					$idSalle=$_GET['id'];
 					$infosSalle = DB::table('salle')->where('id', $idSalle)->first(); 
 						$nomSalle=$infosSalle->nom_salle;
@@ -35,11 +36,12 @@
 							<legend>Location de materiel</legend>	
 						<ul>
 							<?php 
+							$nb_des_materiels=0;
 							$infosMateriel = DB::table('materiel')
 											->get(); 
 							foreach($infosMateriel as $infosMateriel){
 								$quantite=$infosMateriel->quantite;
-								
+								$nb_des_materiels+=1;
 								$nbReserveMateriel = DB::table('materiel_reserve')
 									->join('reservation','reservation.id','=','materiel_reserve.id_reservation')
 									->where('id_materiel','=',$infosMateriel->id)
@@ -62,6 +64,7 @@
 							</div>
 							<div class="col-md-6">
 								 {!!  Form::selectRange($infosMateriel->libelle_materiel, 0, $nb); !!}
+								 <input type="HIDDEN" name="<?php echo $infosMateriel->id ?>" value="<?php echo $infosMateriel->id ?>">
 							</div>
 							</br></br>
 							<?php
@@ -109,7 +112,10 @@
 							</div>
 						</div>
 					</div>
+					
+					<input type="HIDDEN" name="nb_des_materiels" value="<?php echo $nb_des_materiels ?>">
 					<input type="HIDDEN" name="id_salle" value="<?php echo $idSalle ?>">
+					<input type="HIDDEN" name="id_user" value="<?php echo $idUser ?>">
 					<div class="col-md-12">
 						</br></br>
 						{!! Form::submit('Etape suivante !', ['class' => 'btn btn-primary']) !!}
