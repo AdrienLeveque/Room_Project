@@ -4,12 +4,8 @@
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
 */
+
 Route::get('admin_salle','Admin_salleController@index');
 Route::post('admin_salle','Admin_salleController@postForm');
 
@@ -35,10 +31,39 @@ Route::get('contact', 'ContactController@getForm');
 Route::post('contact', 'ContactController@postForm');
 
 
-
+// Authentification et Inscription
 Route::auth();
 
-Route::get('/', function () {
-    return view('accueil');
+// Home
+Route::get('/', [
+	'uses' => 'AccueilController@index', 
+	'as' => 'home'
+]);
+
+Route::get('/toto', function(){
+	return view('connexion');
 });
 
+// Admin
+	Route::get('admin', [
+		'uses' => 'AdminController@index',
+		'as' => 'admin',
+		'middleware' => 'admin'
+]);
+
+// Employe
+Route::get('etat_des_lieux', [
+	'uses' => 'Employer_etat_des_lieuxController@index',
+	'as' => 'employe',
+	'middleware' => 'employe'
+]);
+Route::post('employe_etat_des_lieux', [
+	'uses' => 'Employer_etat_des_lieuxController@store',
+	'as' => 'employe',
+	'middleware' => 'employe'
+]);
+Route::get('agenda', [
+	'uses' => 'Employer_etat_des_lieuxController@show',
+	'as' => 'employe',
+	'middleware' => 'employe'
+]);

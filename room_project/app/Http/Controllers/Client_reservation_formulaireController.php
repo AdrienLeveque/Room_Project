@@ -17,7 +17,7 @@ class Client_reservation_formulaireController extends Controller
      */
     public function index()
     {
-        return view('client_reservation_formulaire');
+        return view('client/client_reservation_formulaire');
     }
 
 	public function postForm(AssuranceRequest $request,
@@ -45,8 +45,7 @@ class Client_reservation_formulaireController extends Controller
 				$reservation->date_fin = $request->input('date_fin'); ;
 				$reservation->etat_des_lieux_effectue = 0;
 				$reservation->id_user = $request->input('id_user'); 
-				$reservation->id_employe = null;
-				$reservation->id_salle_reservation = $request->input('id_salle'); 
+				$reservation->id_salle_reservation = $request->input('id_salle');
 				$reservation->valide = 0;
 				$reservation->save();
 				

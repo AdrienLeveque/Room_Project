@@ -17,7 +17,7 @@ class Client_reservation_paiementController extends Controller
      */
     public function index()
     {
-        return view('client_reservation_paiement');
+        return view('client/client_reservation_paiement');
     }
 
 	public function postForm( PaiementRequest $request
@@ -33,13 +33,13 @@ class Client_reservation_paiementController extends Controller
 						->count(); 
 					 
 		if($id_reservation==0){
-			return view('paiementPasOK');
+			return view('client/paiementPasOK');
 		}else{
 			$reservation = DB::table('reservation')
 						->where('id','=',$request->input('id_reservation'))
 						->update(['valide' => true]);
 						
-			return view('paiementOK');
+			return view('client/paiementOK');
 		}
 		
 	}

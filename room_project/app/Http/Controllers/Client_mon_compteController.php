@@ -11,6 +11,6 @@ class Client_mon_compteController extends Controller
 {
      public function index()
     {
-        return view('client_mon_compte');
+        return view('client/client_mon_compte');
     }
 }

@@ -1,12 +1,4 @@
 <?php $__env->startSection('contenu'); ?>	
-<link rel="stylesheet" href="kalendae/build/kalendae.css" type="text/css" charset="utf-8">
-	<script src="kalendae/build/kalendae.standalone.min.js" type="text/javascript" charset="utf-8"></script>
-	<style type="text/css" media="screen">
-		.kalendae span.closed {
-			background:red;
-		}
-	</style>
-
 
 <!-- Titre -->
 <meta http-equiv="content_type" content="text/html";  charset="utf-8" />
@@ -31,13 +23,16 @@
 <form method="post" action="client_reservation.php"> 
 <input type="text" value="toto" name="input" id="input">
 <script type="text/javascript" charset="utf-8">
-		var k = new Kalendae.Input('input',{
-			attachTo:document.body,
-			months:3,
-			mode:'multiple',
-			weekStart:1,
-			direction:'today-future',
-		});
+		$('#sandbox-container div').datepicker({
+		    weekStart: 1,
+		    todayBtn: "linked",
+		    language: "fr",
+		    multidate: true,
+		    multidateSeparator: "-",
+		    daysOfWeekHighlighted: "0,6",
+		    todayHighlight: true,
+		    datesDisabled: ['05/06/2016', '05/21/2016']
+});
 </script>
 <input type="submit" value="OK"> 
 </form>

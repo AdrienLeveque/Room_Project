@@ -1,18 +1,7 @@
 @extends('layouts.app')
 
-@section('accueil')  @endsection
-
-@section('a_propos')  @endsection  
 
 @section('contact') class="active" @endsection
-
-@section('client_consulter_salles')  @endsection
-
-@section('connexion')  @endsection
-
-@section('inscription')  @endsection
-
-@section('deconnection')  @endsection
 
 @section('content')	
 <!-- Titre -->

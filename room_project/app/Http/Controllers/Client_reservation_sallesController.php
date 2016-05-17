@@ -16,7 +16,7 @@ class Client_reservation_sallesController extends Controller
      */
     public function index()
     {
-               return view('client_reservation_salles');
+               return view('client/client_reservation_salles');
     }
 
 	public function postForm(Request $request,

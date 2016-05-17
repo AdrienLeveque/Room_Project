@@ -15,7 +15,7 @@ class Client_consulter_sallesController extends Controller
      */
     public function index()
     {
-        return view('client_consulter_salles');
+        return view('client/client_consulter_salles');
     }
 
 	

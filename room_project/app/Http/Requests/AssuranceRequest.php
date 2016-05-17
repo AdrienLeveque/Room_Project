@@ -23,8 +23,8 @@ class AssuranceRequest extends Request
      */
     public function rules()
     {
-       return ['Assurance' => 'required|mimes:pdf',
-	   'Clef' => 'required|mimes:pdf',
+       return [
+	   
 	   'date_debut' => 'required',
 	   'date_fin' => 'required'
 	   ];

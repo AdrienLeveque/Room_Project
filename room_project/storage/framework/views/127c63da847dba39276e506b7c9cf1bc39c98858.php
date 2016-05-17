@@ -59,10 +59,8 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li <?php echo $__env->yieldContent('accueil'); ?>><a href="<?php echo e(url('/accueil')); ?>">Accueil</a></li>
-					<li <?php echo $__env->yieldContent('client_consulter_salles'); ?>><a href="<?php echo e(url('/client_consulter_salles')); ?>">Consulter les salles</a></li>
                     <li <?php echo $__env->yieldContent('a_propos'); ?>><a href="<?php echo e(url('/a_propos')); ?>">A propos</a></li>
                     <li <?php echo $__env->yieldContent('contact'); ?>><a href="<?php echo e(url('/contact')); ?>">Contact</a></li>
-					
                 </ul>
 
                 <!-- Right Side Of Navbar -->

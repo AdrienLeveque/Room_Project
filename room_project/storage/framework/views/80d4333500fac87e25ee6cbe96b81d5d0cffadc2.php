@@ -4,8 +4,6 @@
 
 <?php $__env->startSection('contact'); ?> class="active" <?php $__env->stopSection(); ?>
 
-<?php $__env->startSection('client_consulter_salles'); ?>  <?php $__env->stopSection(); ?>
-
 <?php $__env->startSection('connexion'); ?>  <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('inscription'); ?>  <?php $__env->stopSection(); ?>
