@@ -15,7 +15,7 @@ class Admin_employerController extends Controller
      */
     public function index()
     {
-        return view('admin_employer');
+        return view('admin/admin_employer');
     }
 	
 	 public function postForm(Request $request)
@@ -43,7 +43,7 @@ class Admin_employerController extends Controller
 		
 		DB::insert('insert into employe(id_user, id_type_employe) values(?,?)', array($client_id->id,$employe+1));	
 		
-        return view('admin_accueil');
+        return view('admin/admin_accueil');
     }
 
 

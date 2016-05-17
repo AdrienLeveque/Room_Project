@@ -94,7 +94,7 @@ $(document).ready(function() {
                     <li @yield('etat_des_lieux')><a href="{{ url('/etat_des_lieux') }}">Etats des lieux</a></li>
                     @endif
                     @if(session('statut') == '1')
-                    <li @yield('contact')><a href="{{ url('/Administration') }}">Administration</a></li>
+                    <li @yield('administration')><a href="{{ url('/admin_accueil') }}">Administration</a></li>
 					@endif
                 </ul>
 

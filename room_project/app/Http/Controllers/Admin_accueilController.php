@@ -15,12 +15,12 @@ class Admin_accueilController extends Controller
      */
     public function index()
     {
-        return view('admin_accueil');
+        return view('admin/admin_accueil');
     }
 	
 	 public function postForm()
     {
-        return view('admin_salle_update');
+        return view('admin/admin_salle_update');
     }
 
 

@@ -17,7 +17,7 @@ class Admin_salleController extends Controller
      */
     public function index()
     {
-        return view('admin_salle');
+        return view('admin/admin_salle');
     }
 	
 	public function postForm( Admin_salleRequest $request,
@@ -55,7 +55,7 @@ class Admin_salleController extends Controller
 		}*/
 		
 		
-		return view('contact');
+		return view('admin/admin_accueil');
 	}
 
     /**

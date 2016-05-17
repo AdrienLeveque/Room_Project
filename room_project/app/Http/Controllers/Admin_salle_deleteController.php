@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Admin_salle;
 use App\Http\Requests;
 
-class Admin_salle_updateController extends Controller
+class Admin_salle_deleteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class Admin_salle_updateController extends Controller
     public function index()
     {
 		
-        return view('admin_salle_update');
+        return view('admin/admin_salle_delete');
     }
 
 	 public function postForm(Request $request, Admin_salle $salle)
@@ -35,7 +35,7 @@ class Admin_salle_updateController extends Controller
 		if(empty($nom_salle)){
 			return view('admin_accueil');
 		}else{
-			return view('admin_salle');
+			return view('admin/admin_accueil');
 		}
         
     }

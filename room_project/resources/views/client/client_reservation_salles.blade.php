@@ -66,22 +66,7 @@
 							</div>
 						<hr>
 					</div>
-					<div class="col-md-12">
-						<div class="col-md-offset-3">
-							<h2><strong>Selectionner un jour ou une periode disponible</strong></h2>
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="col-md-4">
-							</br>
-							<select class="form-control">
-								<option selectcted="selected">Semaine du</option>
-							</select>
-						</div>
-					</div>
-					<div class="col-md-12">
-					</br></br>
- 					<a class="btn btn-info" href="client_reservation_formulaire?id=<?php echo $idSalle; ?>" role="button">Etape suivante</a>
+					<a class="btn btn-info" href="client_reservation_formulaire?id=<?php echo $idSalle; ?>" role="button">Etape suivante</a>
 					</div>
 				</div>
 			
